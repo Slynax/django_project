@@ -27,20 +27,20 @@ function ShowAnwser(user_anwser) {
         if (text.indexOf("<b") === -1) {
             //Si clique sur VRAI et réponse VRAI
             if (user_anwser && anwser === "True") {
-                newtext = "<b style='color:green;'>Bravo! Bonne réponse.</b> La réponse est VRAI.<br>" + text;
+                newtext = "<b style='color:green;'>Bravo! Bonne réponse.</b> La réponse est TRUE.<br>" + text;
                 score +=1;
             }
             //Si clique sur VRAI et réponse FAUX
             else if (user_anwser && anwser === "False") {
-                newtext = "<b style='color:red;'>Désolé! Mauvaise réponse.</b> La réponse est FAUX.<br>" + text;
+                newtext = "<b style='color:red;'>Désolé! Mauvaise réponse.</b> La réponse est FALSE.<br>" + text;
             }
             //Si clique sur FAUX et réponse VRAI
             else if (!user_anwser && anwser === "True") {
-                newtext = "<b style='color:red;'>Désolé! Mauvaise réponse.</b> La réponse est VRAI.<br>" + text;
+                newtext = "<b style='color:red;'>Désolé! Mauvaise réponse.</b> La réponse est TRUE.<br>" + text;
             }
             //SI clique sur FAUX et réponse FAUX
             else {
-                newtext = "<b style='color:green;'>Bravo! Bonne réponse.</b> La réponse est FAUX.<br>" + text;
+                newtext = "<b style='color:green;'>Bravo! Bonne réponse.</b> La réponse est FALSE.<br>" + text;
                 score +=1;
             }
             explications[compteur].innerHTML = newtext;

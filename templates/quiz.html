@@ -17,7 +17,7 @@
             <div class="card">
                 <img src="{{ "../static/img/" }}{{ question.picture }}" class="card-img-top" alt="">
                 <div class="card-body">
-                    <h5 class="card-title-1"><b style="color:#002333;">VRAI OU FAUX?</b></h5>
+                    <h5 class="card-title-1"><b style="color:#002333;">TRUE OR FALSE?</b></h5>
                     <h5 class="card-title-2">{{question.question}}</h5>
                     <h6 style="display:none;" class="card-subtitle mb-2 text-muted">{{question.answer}}</h6>
                     <p style="display:none;" class="card-text">{{question.explication}}</p>
@@ -29,7 +29,7 @@
                         <button href="#" class="update-score btn btn-faux" data-correct="True" onclick="ShowAnwser(false);">FALSE</button>
                     {% endif %}
 
-                    <button style="display:none;" href="#" class="btn btn-next" onclick="NextQuestion();">NEXT</button>
+                    <button style="display:none;" href="#" class="btn btn-next" onclick="NextQuestion();">Suivant</button>
                     <h2 class="num_question">...</h2>
                 </div>
             </div>
