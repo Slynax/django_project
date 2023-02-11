@@ -3,7 +3,7 @@ Ce projet est un site de quiz auquel l'on peut répondre à des questions sur un
 J'ai utilisé dans le cadre du projet les images et questions du site : "https://quipoquiz.com/".
 J'ai utilisé pour héberger mon site web : "pythonanywhere".
 
-Voici le lien vers le dépôt : "https://github.com/Slynax/django_project/"
+Voici le lien vers le dépôt : "https://github.com/Slynax/django_project/tree/master/"
 Voici le lien vers mon site web : "https://slyn4x.pythonanywhere.com/".
 Voici le login pour se connecter sur le site : "remy".
 Voici le mot de passe pour se connecter sur le site : "x".
