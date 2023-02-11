@@ -117,15 +117,15 @@ function NextQuestion(){
                 } else {
                     var score_grade = json[sub_category]["6"];
                 }
-                document.getElementsByClassName("row")[0].innerHTML = "<div  class='col-sm question-container'><div class='card-final'><form action='redirect_index/' method='post'><input type='hidden' name='csrfmiddlewaretoken' value='" + csrf_token + "'><h2>Grade : " + score_grade + "</h2><p>" + message + "</p><button class='btn' type='submit'>retour</button></form></div></div>"
+                document.getElementsByClassName("row")[0].innerHTML = "<div  class='col-sm question-container'><div class='card-final'><form class ='form-final' action='redirect_index/' method='post'><input type='hidden' name='csrfmiddlewaretoken' value='" + csrf_token + "'><h2>Grade : " + score_grade + "</h2><p>" + message + "</p><button class='btn' type='submit'>retour</button></form></div></div>"
             })
                 .catch(error => {
                     console.error(error);
-                    document.getElementsByClassName("row")[0].innerHTML = "<div  class='col-sm question-container'><div class='card-final'><form action='redirect_index/' method='post'><input type='hidden' name='csrfmiddlewaretoken' value='" + csrf_token + "'><p>" + message + "</p><button class='btn' type='submit'>retour</button></form></div></div>"
+                    document.getElementsByClassName("row")[0].innerHTML = "<div  class='col-sm question-container'><div class='card-final'><form class ='form-final' action='redirect_index/' method='post'><input type='hidden' name='csrfmiddlewaretoken' value='" + csrf_token + "'><p>" + message + "</p><button class='btn' type='submit'>retour</button></form></div></div>"
                 });
         }
         else {
-            document.getElementsByClassName("row")[0].innerHTML = "<div  class='col-sm question-container'><div class='card-final'><form action='redirect_index/' method='post'><input type='hidden' name='csrfmiddlewaretoken' value='" + csrf_token + "'><p>" + message + "</p><button class='btn' type='submit'>retour</button></form></div></div>"
+            document.getElementsByClassName("row")[0].innerHTML = "<div  class='col-sm question-container'><div class='card-final'><form class ='form-final' action='redirect_index/' method='post'><input type='hidden' name='csrfmiddlewaretoken' value='" + csrf_token + "'><p>" + message + "</p><button class='btn' type='submit'>retour</button></form></div></div>"
         }
     }
 }
