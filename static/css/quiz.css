@@ -1,0 +1,51 @@
+:root {
+  --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+}
+.container{
+  background: #DEEFE7;
+}
+.card {
+  background: #B4BEC9;
+  border: 1px solid #002333;
+  color: rgba(250, 250, 250, 0.8);
+  margin-bottom: 2rem;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  width:60%;
+
+}
+.card-final{
+  background: #B4BEC9;
+  border: 1px solid #002333;
+  color: rgba(250, 250, 250, 0.8);
+  margin-bottom: 2rem;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:60%;
+}
+.card-img-top{
+  width:370px;
+  height:370px;
+  align-self: center;
+}
+.card-body{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+}
+.question-container{
+  width:80%;
+  display:flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.num_question{
+  margin: 10px 0;
+  align-self: center;
+}
+.btn{
+  margin-top: 5px;
+}

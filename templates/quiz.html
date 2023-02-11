@@ -1,0 +1,68 @@
+{%  extends 'base.html' %}{% load static %}
+{% block title %}quizzzz{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/quiz.css' %}">{% endblock %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% block js %}
+    <script src="{% static 'js/animation.js' %}"></script>
+    <script defer src="{% static 'js/quiz.js' %}"></script>
+{% endblock %}
+{% block main %}
+
+<div class="container mx-auto mt-4">
+    <h2 id="score">Score : {{ score }}</h2>
+    <div class="row">
+    {% for question in object_list %}
+        <h2 style="display:none" class="sub_category">{{ question.sub_category_fk}}</h2>
+        <div style="display:none;" class="col-sm question-container">
+            <div class="card">
+                <img src="{{ "../static/img/" }}{{ question.picture }}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title-1"><b style="color:#002333;">VRAI OU FAUX?</b></h5>
+                    <h5 class="card-title-2">{{question.question}}</h5>
+                    <h6 style="display:none;" class="card-subtitle mb-2 text-muted">{{question.answer}}</h6>
+                    <p style="display:none;" class="card-text">{{question.explication}}</p>
+                    {% if question.answer %}
+                        <button href="#" class="update-score btn btn-vrai" data-correct="True" onclick="ShowAnwser(true);">TRUE</button>
+                        <button href="#" class="update-score btn btn-faux" data-correct="False" onclick="ShowAnwser(false);">FALSE</button>
+                    {% else %}
+                        <button href="#" class="update-score btn btn-vrai" data-correct="False" onclick="ShowAnwser(true);">TRUE</button>
+                        <button href="#" class="update-score btn btn-faux" data-correct="True" onclick="ShowAnwser(false);">FALSE</button>
+                    {% endif %}
+
+                    <button style="display:none;" href="#" class="btn btn-next" onclick="NextQuestion();">NEXT</button>
+                    <h2 class="num_question">...</h2>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    </div>
+</div>
+
+    <script>
+        var csrf_token = "{{ csrf_token }}";
+          var buttons = document.querySelectorAll('.update-score');
+          for (var i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+              var correct = encodeURIComponent(this.getAttribute('data-correct'));
+              var userid = encodeURIComponent("{{ request.user.username }}");
+              var xhr = new XMLHttpRequest();
+              var data = new URLSearchParams();
+              data.append('correct', correct);
+              data.append('userid', userid);
+
+              xhr.open('POST', {% url 'update_score' %}, true);
+              xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+              xhr.setRequestHeader('X-CSRFToken', '{{ csrf_token }}');
+              xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                  console.log(xhr.response);
+                  document.getElementById("score").innerHTML = "Score : " + xhr.response;
+                }
+              };
+              console.log(data);
+              xhr.send(data);
+            });
+          }
+    </script>
+{% endblock %}

@@ -1,0 +1,24 @@
+body {
+  padding-top: 5rem;
+  background-color: #FFFFFF;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+#div-navbar{
+  justify-content: flex-end;
+}
+#navbar{
+  background-color: #159A9C;
+}
+.btn{
+  background-color: RGB(220,220,220) ;
+  border-color:#002333;
+  color: #002333;
+}
+.btn:hover{
+  background-color: RGBA(159,172,187,1) ;
+  border-color:#FFFFFF;
+  color: #FFFFFF;
+}

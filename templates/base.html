@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> {% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/fontawesome.min.css' %}">
+    {% block css %}{% endblock %}
+    {% block js %}{% endblock %}
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
+    <a class="navbar-brand" href="{% url 'index' %}">TrueQrFalse</a>
+    {% if request.user.is_authenticated %}
+        <a class="navbar-brand" href="{% url 'my_quiz' %}">Mes quizzes</a>
+        <a class="navbar-brand" href="{% url 'create_quiz' %}">Créer un quiz</a>
+        <a class="navbar-brand" href="{% url 'create_question' %}">Créer des questions</a>
+    {% endif %}
+
+    <div class="collapse navbar-collapse" id="div-navbar">
+
+        {% if request.user.is_authenticated %}
+            <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <label class="mr-sm-2" type="text">{{ user.username }}</label>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Logout">Logout</button>
+            </form>
+        {% else %}
+            <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <label class="mr-sm-2" type="text"></label>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Login">Login</button>
+            </form>
+            <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'register' %}">
+                {% csrf_token %}
+                <label class="mr-sm-2" type="text"></label>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Register">Register</button>
+            </form>
+        {% endif %}
+
+
+    </div>
+</nav>
+{% block main %}{% endblock %}
+
+</body>
+</html>

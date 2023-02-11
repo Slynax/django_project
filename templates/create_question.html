@@ -1,0 +1,71 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block title %}Créer question{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/create_quiz.css' %}">{% endblock %}
+{% block js %}
+    <script src="{% static 'js/create_quiz.js' %}"></script>{% endblock %}
+{% block main %}
+    <div class="page-wrapper p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Ajouter une question</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype= "multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="name">{{ form.quiz.label }}</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{form.quiz}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">{{ form.question.label }}</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="{{ form.question.field.widget.input_type }}"
+                                           name="{{ form.question.name }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">{{ form.picture.label }}</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input  type="{{ form.picture.field.widget.input_type }}"
+                                           name="{{ form.picture.name }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">{{ form.answer.label }}</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="{{ form.answer.field.widget.input_type }}"
+                                           name="{{ form.answer.name }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">{{ form.explication.label }}</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="{{ form.explication.field.widget.input_type }}"
+                                           name="{{ form.explication.name }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn--radius-2 type="submit">Ajouter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

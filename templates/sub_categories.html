@@ -1,0 +1,27 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block title %}Catégories{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/sub_categories.css' %}">{% endblock %}
+
+{% block main %}
+
+    <div class="wrapper-grey padded">
+      <div class="container">
+          <h2 class="text-center">Choisissez une sous-catégorie</h2>
+          <div class="row">
+              {% for sub_category in object.category_pk.all %}
+                  {% if object.name == sub_category.category_fk.name %}
+                    <div class="col-sm-4">
+                        <a href="{% url 'quiz' sub_category.id %}">
+                            <div class="card" style="background-image : url('{{ "../static/img/" }}{{ sub_category.picture }}');">
+                              <div class="card-category">{{ sub_category.name }}</div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+              {% endfor %}
+          </div>
+      </div>
+    </div>
+
+{% endblock %}

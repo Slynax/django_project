@@ -1,0 +1,140 @@
+{
+  "Corbeaux":{
+    "1": "Poussin de corbeau",
+    "2": "Jeune corbeau effarouché",
+    "3": "Corbeau en herbe",
+    "4": "Corbeau confirmé",
+    "5": "Corbeau savant",
+    "6": "Corbeau majestueux"
+  },
+  "Serpents":{
+    "1": "Serpent en herbe",
+    "2": "Serpent novice",
+    "3": "Serpent aguerri",
+    "4": "Serpent redoutable",
+    "5": "Serpent terrifiant",
+    "6": "Serpent mythique"
+  },
+  "Animaux du desert":{
+    "1": "Chameau timide",
+    "2": "Lézard aventurier",
+    "3": "Scorpion curieux",
+    "4": "Vautour astucieux",
+    "5": "Serpent des sables expérimenté",
+    "6": "Chacal roi du désert"
+  },
+  "Les ruminants":{
+    "1": "Jeune agneau égaré",
+    "2": "Gazelle découvreuse",
+    "3": "Antilope intrépide",
+    "4": "Buffle astucieux",
+    "5": "Yak conquérant",
+    "6": "Rhinocéros implacable"
+
+  },
+  "Les equides":{
+    "1": "Jeune poulain maladroit",
+    "2": "Âne curieux",
+    "3": "Cheval sauvage",
+    "4": "Poney malin",
+    "5": "Etalon aventureux",
+    "6": "Légendaire centaure"
+  },
+  "Le trône de fer":{
+    "1": "Vassal sans éclat",
+    "2": "Conseiller astucieux",
+    "3": "Chevalier audacieux",
+    "4": "Lord manipulateur",
+    "5": "Seigneur du Nord implacable",
+    "6": "Maître des Sept Couronnes"
+  },
+  "Metallica":{
+    "1": "Amateur de pop",
+    "2": "Fan occasionnel",
+    "3": "Rocker déterminé",
+    "4": "Guitariste déchaîné",
+    "5": "Guitare électrique endiablée",
+    "6": "Maître du heavy metal"
+  },
+  "Les expressions française":{
+    "1": "Français à la dérive",
+    "2": "Apprenti francophone",
+    "3": "Touriste linguistique",
+    "4": "Champion de la conjugaison",
+    "5": "Maitre du verbe",
+    "6": "Empereur des mots"
+  },
+  "La gramaire":{
+    "1": "Brouillon du style",
+    "2": "Apprenti grammairien",
+    "3": "Correcteur débutant",
+    "4": "Orthographe hero",
+    "5": "Maître de la syntaxe",
+    "6": "Empereur de l'écriture"
+  },
+  "La dictée de Pivot":{
+    "1": "Orthographe en déroute",
+    "2": "Stagiaire de la dictée",
+    "3": "Dictée en herbe",
+    "4": "Champion des mots",
+    "5": "Génie de l'orthographe",
+    "6": "Maître de la dictée"
+  },
+  "Les capitales d'Europe":{
+    "1": "Touriste perdu",
+    "2": "Nouveau en Europe",
+    "3": "Européen en herbe",
+    "4": "Explorateur urbain",
+    "5": "Génie géographique",
+    "6": "Roi des capitales"
+  },
+  "New York":{
+    "1": "Nouveau à New York",
+    "2": "Naïf de la Grosse Pomme",
+    "3": "Amoureux de New York",
+    "4": "New-yorkais en devenir",
+    "5": "Expert de la ville qui ne dort jamais",
+    "6": "Roi de la ville qui brille"
+  },
+  "Les plages célèbres":{
+    "1": "Nouveau sur la plage",
+    "2": "Apprenti de la mer",
+    "3": "Amoureux des vagues",
+    "4": "Expert en bronzage",
+    "5": "Roi des fruits de mer",
+    "6": "Dieu des plages"
+  },
+  "L'empire romain":{
+    "1": "Nouveau à Rome",
+    "2": "Apprenti de l'Empire",
+    "3": "Citoyen Romain",
+    "4": "Général en herbe",
+    "5": "Empereur en devenir",
+    "6": "Maître de l'Empire"
+  },
+  "La reine Elizabeth II":{
+    "1": "Jeune prince Charles",
+    "2": "Duc de Cornouailles",
+    "3": "Futur Roi",
+    "4": "Monarque en herbe",
+    "5": "Héritier du trône",
+    "6": "Souverain britannique légendaire"
+
+  },
+  "Les bateaux célèbres":{
+    "1": "Vous avez coulé comme le Titanic",
+    "2": "Vous naviguez comme le Queen Mary",
+    "3": "Vous êtes en mer comme le SS Minow",
+    "4": "Vous voguez comme le LUSITANIA",
+    "5": "Vous naviguez en haute mer comme le Bounty",
+    "6": "Vous dominez les mers comme le Black Pearl"
+  },
+  "Les tatouages":{
+    "1": "Tatouage invisible",
+    "2": "Tatouage en devenir",
+    "3": "Tatouage en herbe",
+    "4": "Tatouage en fleur",
+    "5": "Tatouage accompli",
+    "6": "Tatouage maître"
+  }
+}

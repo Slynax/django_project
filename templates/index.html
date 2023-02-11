@@ -1,0 +1,31 @@
+{%  extends 'base.html' %}{% load static %}
+
+{% block title %}Catégories{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/categories.css' %}">{% endblock %}
+
+{% block main %}
+
+    <div class="wrapper-grey padded">
+      <div class="container">
+          <h2 class="text-center">Choisissez une catégorie</h2>
+          <div class="row">
+              {% for object in object_list %}
+                  <div class="col-sm-3">
+                    <div class="card">
+                        <a class="link_card" href="{% url 'sub_categories' object.id %}">
+                            <img class="card-user avatar avatar-large" src="{{ "static/img/" }}{{ object.picture }}">
+                            <div class="card-category">{{ object.name }}</div>
+                        </a>
+                    </div>
+                  </div>
+
+              {% endfor %}
+
+          </div>
+      </div>
+    </div>
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+{% endblock %}
