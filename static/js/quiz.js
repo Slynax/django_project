@@ -101,7 +101,7 @@ function NextQuestion(){
         if (document.getElementsByClassName("sub_category").length > 0) {
 
 
-            getJSON("http://127.0.0.1:8000/static/json/score_quiz.json").then(json => {
+            getJSON("https://slyn4x.pythonanywhere.com/static/json/score_quiz.json").then(json => {
                 sub_category = document.getElementsByClassName("sub_category")[0].innerHTML;
 
                 if (score_percent >= 0 && score_percent < 20) {
