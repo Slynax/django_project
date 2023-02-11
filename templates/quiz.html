@@ -9,7 +9,9 @@
 {% block main %}
 
 <div class="container mx-auto mt-4">
-    <h2 id="score">Score : {{ score }}</h2>
+    {% if request.user.is_authenticated %}
+        <h2 id="score">Score : {{ score }}</h2>
+    {% endif %}
     <div class="row">
     {% for question in object_list %}
         <h2 style="display:none" class="sub_category">{{ question.sub_category_fk}}</h2>

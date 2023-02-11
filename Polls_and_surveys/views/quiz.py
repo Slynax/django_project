@@ -23,9 +23,10 @@ class QuizView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        user = MyUser.objects.get(username=self.request.user)
-        score, created = Score.objects.get_or_create(user=user)
-        context['score'] = score.score
+        if self.request.user.is_authenticated:
+            user = MyUser.objects.get(username=self.request.user)
+            score, created = Score.objects.get_or_create(user=user)
+            context['score'] = score.score
         context['csrf_token'] = self.request.META['CSRF_COOKIE']
         return context
 
