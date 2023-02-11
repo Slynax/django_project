@@ -34,18 +34,18 @@
             <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'logout' %}">
                 {% csrf_token %}
                 <label class="mr-sm-2" type="text">{{ user.username }}</label>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Logout">Logout</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Logout">se déconnecter</button>
             </form>
         {% else %}
             <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'login' %}">
                 {% csrf_token %}
                 <label class="mr-sm-2" type="text"></label>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Login">Login</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Login">se connecter</button>
             </form>
             <form class="form-inline my-2 my-lg-0" method="post" action="{% url 'register' %}">
                 {% csrf_token %}
                 <label class="mr-sm-2" type="text"></label>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Register">Register</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Register">s'identifier</button>
             </form>
         {% endif %}
 
