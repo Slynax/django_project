@@ -11,8 +11,6 @@ J'ai utilisé pour héberger mon site web : "pythonanywhere".
 
 Voici le lien vers le dépôt : "https://github.com/Slynax/django_project/tree/master/"
 
-Le dépôt est privé, mais je vous ai invité en tant que collaborateur normalement.
-
 Voici le lien vers mon site web : "https://slyn4x.pythonanywhere.com/".
 
 Voici le login pour se connecter sur le site : "user".
