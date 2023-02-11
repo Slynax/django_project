@@ -7,12 +7,14 @@
 
     <div class="wrapper-grey padded">
       <div class="container">
-          <h2 class="text-center">Choisi ton quiz</h2>
-          <div class="row">
+
           {% if object_list|length == 0 %}
             <h1>Vous n'avez pas creér de quiz</h1>
               <h2>Pour créer un quiz cliquez sur "Créer un quiz"</h2>
+              <div class="row">
           {% else %}
+              <h2 class="text-center">Choisi ton quiz</h2>
+                <div class="row">
               {% for quiz in object_list %}
 
                     <div class="col-sm-4">
