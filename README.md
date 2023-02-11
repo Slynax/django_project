@@ -12,9 +12,9 @@ Le dépôt est privé, mais je vous ai invité en tant que collaborateur normale
 
 Voici le lien vers mon site web : "https://slyn4x.pythonanywhere.com/".
 
-Voici le login pour se connecter sur le site : "remy".
+Voici le login pour se connecter sur le site : "user".
 
-Voici le mot de passe pour se connecter sur le site : "x".
+Voici le mot de passe pour se connecter sur le site : "user".
 
 
 Voici le lien vers l'interface d'administration du site : "https://slyn4x.pythonanywhere.com/admin/".
