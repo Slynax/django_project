@@ -54,7 +54,7 @@ Pour créer un quiz (vous devez être connecté à un compte):
 - Enfin une fois fini, cliquez sur "Mes quizzes" dans le menu de navigation pour accéder au quiz créé.
 
 
-L'ajout de photos et de questions étant assez long est redondant, j'ai rempli seulement quelques quiz parmi tous ceux visible sur le quiz.
+L'ajout de photos et de questions étant assez long est redondant, j'ai rempli seulement quelques quiz parmi tous ceux visible sur le site.
 
 Voici les quiz disponibles :
 
