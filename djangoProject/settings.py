@@ -27,9 +27,7 @@ SECRET_KEY = 'django-insecure-djpm8b7d)_8prwk*e%zm99s^0l)bkvyax6^_ya57rfu4526yim
 DEBUG = True
 
 ALLOWED_HOSTS = ['slyn4x.pythonanywhere.com']
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -119,11 +117,10 @@ USE_TZ = True
 
 
 #STATICFILES_DIRS = (
-#   os.path.join(BASE_DIR, "static"),
+   #os.path.join(BASE_DIR, "static"),
 #)
 
-STATIC_URL = '/static/'
-
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
